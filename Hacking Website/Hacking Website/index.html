@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The World of Hacking</title>
+        <!-- Linking file to stylesheet -->
+        <link rel="stylesheet" href="styles/styles.css">
+        <!-- Linking file to Google Fonts --> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:ital,wght@0,300..700;1,300..700&family=Share+Tech+Mono&display=swap" rel="stylesheet">    </head>
+
+    <!-- Main content box - container for all content. Set to the class of the main font, and as it is the top of the page, receives that id for use of buttons.-->
+    <body class="fira-code-regular" id="top">
+        <!-- Wrapper for all content - contains all page elements and is used for CSS grid styling. -->
+        <div class="wrapper">
+            <!-- Background image div, styled in CSS file. -->
+            <div class="bgd-img"></div>
+            <!-- Displays site title with classes for its grid placement and font styling. -->
+            <div class="banner share-tech-mono-regular">
+                <h1>The World of Hacking</h1>
+            </div>
+            <!-- Navigation bar with links to 4 different pages; current page is highlighted. -->
+            <div class="nav share-tech-mono-regular">
+                <a href="index.html" style="background-color: #73c157;
+                                            color:black;">Home</a>
+                <a href="hacking_history.html">History of Hacking</a>
+                <a href="types_of_hackers.html">Types of Hackers</a>
+                <a href="famous_hacks.html">Famous Hacks</a>
+            </div>
+            <!-- Introduction header - classes for grid and font styling. -->
+            <div class="intro_header share-tech-mono-regular">
+                <h1 style="font-size: 40px;">Welcome, User, to the World of Hacking!</h1>                
+            </div>
+            <!-- The only main content box for this page - introduction to the site. -->
+            <div class="content_box1">
+                <p style="font-size: 26px;">Hacking is no longer just a science fiction term, but 
+                                            a real and growing force that shapes the digital world we live in on a daily basis.<br>
+                                            From motives of financial gain to data theft, to exposing government secrets, the 
+                                            various types of hacking permeate and heavily influence countless sectors such as 
+                                            cybersecurity, social engineering, and cryptography.<br> This intuitive website 
+                                            explores the history, people, and events that have, do, and will continue to define 
+                                            the world of hacking. Whether you're curious about the types of hackers or looking to 
+                                            learn about the biggest breaches worldwide, you've come to the right place!<br>
+                                            Explore the site to discover the origins of hacking, the different types
+                                            of hackers, and some of the most notorious cyberattacks in history.<br><br>
+                                            Use the interactive infographic below from the CHECK POINT website to view current 
+                                            data on recently occurring hacks worldwide:</p>
+            </div>
+            <!-- Image section with class for grid placement, in this case an embedded iframe. -->
+            <div class="content_img">
+                <iframe src="https://threatmap.checkpoint.com" 
+                        width="100%" 
+                        height="600px"
+                        style="border-radius: 1.5vw; border: none; margin-bottom: 2.5%;">
+                </iframe>
+                <!-- Source citation for iframe. -->
+                <a style="font-size: 16px;" href="https://threatmap.checkpoint.com/" target="_blank">Checkpoint / Threatmap / Live global cyberattack map</a>
+                
+            </div>
+            <!-- Back to top button with class for styling in CSS file. -->
+            <a href="#top" class="top_btn" style="font-size: 20px;">↑ Back to Top</a>
+            <!-- Footer displaying copyright and author information. -->
+            <footer class="footer" style="font-size: 16px;"><p>Copyright 2026, Isaac Bandara's Hacking Website.</p></footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!-- This file and the ones for the other pages (except the index) share the same structure 
+ and styling as the index file, with the exceptions being what is specified inline as below. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The World of Hacking</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:ital,wght@0,300..700;1,300..700&family=Share+Tech+Mono&display=swap" rel="stylesheet">    </head>
+
+    <body class="fira-code-regular" id="top">
+
+        <div class="wrapper">
+            
+            <div class="bgd-img"></div>
+            <!-- Has the same different banner class to index as the two previous pages -->
+            <div class="banner1 share-tech-mono-regular">
+                <h1>The World of Hacking</h1>
+            </div>
+        
+            <div class="nav share-tech-mono-regular">
+                <a href="index.html">Home</a>
+                <a href="hacking_history.html">History of Hacking</a>
+                <a href="types_of_hackers.html">Types of Hackers</a>
+                <!-- Inline styling specific to this page -->
+                <a href="famous_hacks.html" style="background-color: #73c157;
+                                            color:black;">Famous Hacks</a>
+            </div>
+            <!-- Different intro_header class due to different animations in CSS file -->
+            <div class="intro_header3 share-tech-mono-regular">
+                <h1 style="font-size: 40px;">Famous Hacks</h1>                
+            </div>
+            <!-- Two content boxes with same styling and formatting as previous pages except index. -->
+            <div class="content_box1">
+                <p style="font-size: 26px;">Throughout history, there have been cyberattacks so monumental they
+                                            have shifted the perspective of the world on cybersecurity. Here are some
+                                            of the most infamous hacks of all time.</p>
+                <h2 style="font-size: 32px;">Stuxnet — 2010</h2>
+                <p style="font-size: 26px;">Stuxnet was a complex computer worm believed to have been created
+                                            by the United States and Israel. It was intended to sabotage Iran's
+                                            nuclear program by physically destroying centrifuges used to enrich
+                                            uranium. Stuxnet was the first known cyberattack to cause physical destruction, 
+                                            and so shifted the concept of warfare forever.</p>
+                <h2 style="font-size: 32px;">Sony PlayStation Network Breach — 2011</h2>
+                <p style="font-size: 26px;">In April 2011, hackers infiltrated Sony's PlayStation Network, stealing
+                                            personal data from over 77 million users. This included names, addresses,
+                                            and credit card details, solidifying this event as one of the largest data breaches 
+                                            in history. Sony was forced to shut down the network for 23 days.</p>
+                <h2 style="font-size: 32px;">Edward Snowden Leaks — 2013</h2>
+                <p style="font-size: 26px;">Edward Snowden, a former NSA contractor, leaked thousands of classified
+                                            documents revealing to the public that the United States government was conducting mass
+                                            surveillance on its own citizens as well as foreign world leaders. These leaks
+                                            sparked a long ensuing debate worldwide about privacy and government power.
+                                            Snowden has lived in exile in Russia ever since.</p>
+            </div>
+
+            <!-- Uses different image classes to style for 2 side-by-side images as below. -->
+            <div class="content_img1">
+                <p style="font-size: 24px;">Edward Snowden</p>
+                <img src="images/Edward_Snowden.jpg" alt="Edward Snowden portrait">
+                <p style="font-size: 16px;">Source:<br>Wikipedia / Edward Snowden</p>
+            </div>
+
+            <div class="content_img2">
+                <p style="font-size: 24px;">Kevin Mitnick</p>
+                <img src="images/Kevin_Mitnick.jpg" alt="Kevin Mitnick portrait">
+                <p style="font-size: 16px;">Source:<br>Fortune Magazine / Getty Images</p>
+            </div>
+
+            <div class="content_box2">
+                <h2 style="font-size: 32px;">Ashley Madison Hack — 2015</h2>
+                <p style="font-size: 26px;">In 2015, a hacking group known as The Impact Team hacked into Ashley Madison, a dating
+                                            website for people looking to have affairs. Their leak of 32 million members' 
+                                            personal data destroyed countless relationships, led to divorces, and was linked to 
+                                            multiple suicides.</p>
+                <h2 style="font-size: 32px;">WannaCry Ransomware Attack — 2017</h2>
+                <p style="font-size: 26px;">The WannaCry ransomware was a global attack that infected over 200,000
+                                            computers across 150 countries in a single day. The ransomware encrypted 
+                                            the the victims' files and demanded Bitcoin payments to release them. 
+                                            The UK's National Health Service was severely impacted, leading to hospital 
+                                            appointments being cancelled and patients being turned away. This attack was 
+                                            linked to North Korean hackers.</p>
+                <h2 style="font-size: 32px;">Kevin Mitnick — The World's Most Wanted Hacker</h2>
+                <p style="font-size: 26px;">Kevin Mitnick was once the most wanted computer criminal in the United 
+                                            States. Throughout the 1980s and 1990s he hacked into the computer systems of 
+                                            some of the world's largest companies at the time, including Nokia, 
+                                            Motorola, and Pacific Bell, stealing software and other sensitive data from these 
+                                            corporations. The FBI pursued him for years before finally arresting him in 1995. 
+                                            He served five years in prison, with eight months in solitary confinement for his 
+                                            alleged ability to launch nuclear missiles by simply whistling into a payphone. 
+                                            After his release from prison, Mitnick became a celebrated cybersecurity consultant and 
+                                            author until he passed away in 2023.</p>
+            </div>
+                
+            <a href="#top" class="top_btn" style="font-size: 20px;">↑ Back to Top</a>
+        
+            <footer class="footer" style="font-size: 16px;"><p>Copyright 2026, Isaac Bandara's hacking website.</p></footer>
+        </div>
+    </body>
+</html>
