@@ -1,0 +1,92 @@
+<!-- This file and the ones for the other pages (except the index) share the same structure 
+ and styling as the index file, with the exceptions being what is specified inline as below. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>The World of Hacking</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:ital,wght@0,300..700;1,300..700&family=Share+Tech+Mono&display=swap" rel="stylesheet">    </head>
+
+    <body class="fira-code-regular" id="top">
+
+        <div class="wrapper">
+            
+            <div class="bgd-img"></div>
+            <!-- Has a different banner class as it has no animation in CSS file -->
+            <div class="banner1 share-tech-mono-regular">
+                <h1>The World of Hacking</h1>
+            </div>
+
+            <div class="nav share-tech-mono-regular">
+                <a href="index.html">Home</a>
+                <!-- Has different inline styling for the navbar to highlight the current page -->
+                <a href="hacking_history.html" style="background-color: #73c157;
+                                            color:black;">History of Hacking</a>
+                <a href="types_of_hackers.html">Types of Hackers</a>
+                <a href="famous_hacks.html">Famous Hacks</a>
+            </div>
+            <!-- Has a different intro_header class due to different animations in CSS file -->
+            <div class="intro_header1 share-tech-mono-regular">
+                <h1 style="font-size: 40px;">A (brief) History of Hacking</h1>                
+            </div>
+            <!-- This page has two content boxes, split in half by an image. This is shown and explained in the CSS file. -->
+            <div class="content_box1">
+                <p style="font-size: 26px;">Hacking has been around nearly as long as computers themselves. From 
+                                            curiosity and experimentation, hacking has grown into of the most important 
+                                            aspects of modern technology and global security.</p>
+                <h2 style="font-size: 32px;">1960s — The Beginning</h2>
+                <p style="font-size: 26px;">The term "hacker" was first used at MIT in reference to students who pushed 
+                                            computers beyond their intended limits. These early hackers were not 
+                                            criminals, but rather curious engineers who wanted to learn how 
+                                            the new systems worked.</p>
+                <h2 style="font-size: 32px;">1970s — Phone Phreaking</h2>
+                <p style="font-size: 26px;">The next generation of hackers found a way to exploit the telephone 
+                                            networks to make free phone calls. The most famous of these was John Draper, 
+                                            nicknamed "Captain Crunch", who used a toy whistle to hack AT&T's phone 
+                                            system by emitting specific frequencies at certain moments to trick the system.</p>
+                <h2 style="font-size: 32px;">1980s — The First Cybercriminals</h2>
+                <p style="font-size: 26px;">As personal computers became more widespread, hacking moved from curiosity 
+                                            to crime. In 1983, the movie "WarGames" was released, bringing hacking into public 
+                                            awareness, as it showed a teenager nearly starting World War III by hacking 
+                                            into a military computer</p>
+            </div>
+        
+            <!-- Rather than an iframe, an image is used, complete with a caption, citation, and alt tag for accessibility. -->
+            <!-- The same class is used for styling in the CSS file, as that remains the same despite the difference between iframes and images. -->
+            <div class="content_img">
+                <p style="font-size: 24px;">This graph shows recent surges in hacking occurrences over the past 17 years</p>
+                <img src="images/hacking_over_time.jpg" width="100%" alt="Graph showing hacking statistics over the past 17 years.">
+                <p style="font-size: 16px;">Source: https://www.hipaajournal.com/healthcare-data-breach-statistics/</p>
+            </div>
+
+            <!-- Second content box -->
+            <div class="content_box2">
+                <h2 style="font-size: 32px;">1990s — The Internet Era</h2>
+                <p style="font-size: 26px;">The rise of the internet has brought forth an entirely new world for hackers. 
+                                            Kevin Mitnick became one of the most wanted cybercriminals in the US after
+                                            breaking into the systems of companies like Nokia and Motorola, accessing 
+                                            sensitive information, tape drives, and manipulable source code.</p>
+                <h2 style="font-size: 32px;">2000s — Large Scale Attacks</h2>
+                <p style="font-size: 26px;">In this time, hacking grew into a global menace and threat. In 2000, a 15-year-old Canadian 
+                                            known as "Mafiaboy" downed major websites including Yahoo, CNN, 
+                                            and Amazon using denial-of-service attacks (by overwhelming their networks with masses of fake traffic).</p>
+                <h2 style="font-size: 32px;">2010s — Hacking Goes Political</h2>
+                <p style="font-size: 26px;">From 2010 onwards, hacking became a major tool for governments and political groups. In 2013, 
+                                            Edward Snowden leaked classified NSA documents revealing massive government 
+                                            surveillance operations world-wide. Additionally, in 2016, state-sponsored hackers tampered with the 
+                                            US presidential election, resulting in numerous reforms, expulsions, and resignations.</p>
+                <h2 style="font-size: 32px;">Today</h2>
+                <p style="font-size: 26px;">Nowadays, hacking is a billion-dollar industry, not only for cybercriminals, but also 
+                                            for those hired to stop and prevent them. Cybersecurity is considered to be one of the 
+                                            fastest growing fields in the entire technology industry.</p>
+            </div>
+
+            <a href="#top" class="top_btn" style="font-size: 20px;">↑ Back to Top</a>
+        
+            <footer class="footer" style="font-size: 16px;"><p>Copyright 2026, Isaac Bandara's hacking website.</p></footer>
+        </div>
+    </body>
+</html>

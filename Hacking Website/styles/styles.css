@@ -1,0 +1,305 @@
+/* This style affects all the content */
+body {
+    margin: 4%;
+    color: #3ca252;
+}
+
+/* Settings for the two different font classes */
+.share-tech-mono-regular {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fira-code-regular {
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Background image - fixed location, full screen size, dimmed brightness (as testing 
+showed it to be more visually appealing as such, and set as furthest back element
+(z-index: -1). */
+.bgd-img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../images/matrix_code.gif");
+    filter: brightness(0.75);
+    z-index: -1;
+}
+
+/* Basic navbar styling - flexbox, even spacing, centering, flex-wrap (allows line wrapping for text on smaller screens). */
+.nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+
+/* Styling for navbar text/links - removes underlining and adds padding, rounded corners, and chosen colours. */
+.nav a {
+    text-decoration: none;
+    padding: 14px 16px;
+    background-color: #3ca252;
+    color: #e9ffea;
+    border-radius: 1.5vw;
+}
+
+/* Styling to change buttons appearence when hovered over */
+.nav a:hover {
+    background-color: #73c157;
+    color:black;
+    padding: 18px 20px;
+}
+
+/*                  ------ Set up of the site grid ------                  */
+/*                Two equal columns and auto-adjusting rows.               */
+/* grid-template-areas define where each class of element sits on the page */
+.wrapper {
+    z-index: 1;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "banner nav"
+        "intro_header intro_header"
+        "content_box1 content_box1"
+        "content_img content_img"
+        /* The two succeeding lines are only used for pages which require them, and are skipped over by other pages which do not. */
+        /* Content images 1 & 2 for pages with multiple, such as 'Famous Hacks'. */
+        /* Dual content boxes used for all pages other than 'Home'. */
+        "content_img1 content_img2"
+        "content_box2 content_box2"
+        "footer footer"
+}
+
+/* Styling for the pages' heading banners - consistent across all pages. */
+/* vw units scale with screen size, semi-transparent background shows matrix 
+   gif through it, other styling is for centering and sizing of background. */
+.banner, .banner1{
+    color: rgb(181, 241, 184);
+    background-color: #007d198a;
+    padding: 1vw;
+    grid-area: banner;
+    display: flex;
+    align-items: center;
+    height: 8vw;
+    font-size: 2vw;
+    justify-content: center;
+    border-radius: 2vw;
+}
+
+/* Typewriter effect for home page banner */
+.banner h1 {
+    /* Keeps everything in one line */
+    white-space: nowrap;
+    /* Hides everything outside width */
+    overflow: hidden;
+    /* Makes a stationary cursor on the right edge as a border */
+    border-right: 3px solid rgb(181, 241, 184);
+    animation:
+        /* Calls the 'typing' function and sets it to 23 increments (char count) over 3 seconds (animation length). 
+        Over this time the width increases from 0 to 100%, revealing the text. */
+        typing 3s steps(23) forwards,
+        /* For every 50% out of 100% (done in intervals) of the time the border is made transparent, so it appears 
+        flashing, every 0.7 seconds and 6 times. */
+        blink 0.7s step-end 6,
+        /* Instantly makes border transparent after 4s on page, keeps like this permanently */
+        disappear 0s 4s forwards;
+}
+
+/* FUNCTIONS EXPLAINED ABOVE AND BELOW */
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+
+@keyframes appear {
+    to{opacity: 1;}
+}
+
+@keyframes disappear {
+    to{border-color: transparent;}
+}
+
+/* Same typewriter effect as banner but 'appear' rule makes it only appear after the previous animation is complete. */
+.intro_header h1 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    /* Keeps it transparent temporarily */
+    opacity: 0;
+    border-right: 3px solid rgb(181, 241, 184);
+    animation:
+        /* Appears instantly 3.5s after page load */
+        appear 0s 3.5s forwards,
+        typing 3.5s steps(40) 3.5s forwards,
+        blink 0.7s step-end 3.5s 8,
+        disappear 0s 8s forwards;
+}
+
+/* For these 3 pages, the banner has no animation, so the subtitle typewriters start immediately. */
+.intro_header1 h1 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid rgb(181, 241, 184);
+    animation:
+        typing 3s steps(26) forwards,
+        blink 0.7s step-end 6,
+        disappear 0s 4s forwards;
+}
+
+.intro_header2 h1 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid rgb(181, 241, 184);
+    animation:
+        typing 2s steps(15) forwards,
+        blink 0.7s step-end 5,
+        disappear 0s 3s forwards;
+}
+
+.intro_header3 h1 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid rgb(181, 241, 184);
+    animation:
+        typing 1.5s steps(12) forwards,
+        blink 0.7s step-end 4,
+        disappear 0s 2.5s forwards;
+}
+
+/* Shared styling for intro header containers across all pages */
+.intro_header, .intro_header1, .intro_header2, .intro_header3 {
+    color: rgb(181, 241, 184);
+    grid-area: intro_header;
+    justify-self: center;
+    text-align: center;
+    background-color:#007d198a;
+    margin: 5vw;
+    padding: 2%;
+    border-radius: 2vw;
+}
+
+/* Gives different colour and alignment to sub-subtitles within main content - H2 tags. */
+.content_box1 h2, .content_box2 h2 {
+    color: rgb(181, 241, 184);
+    text-align: center;
+}
+
+/* First and second content boxes share the same backgrounds and design, but have different grid areas. */
+.content_box1, .content_box2 {
+    color:#6fcd4d;
+    text-align: justify;
+    background-color: #007d19c8;
+    border-radius:2.5vw;
+    margin-bottom: 3vw;
+}
+
+.content_box1 {
+    grid-area: content_box1;
+}
+
+.content_box2 {
+    grid-area: content_box2;
+}
+
+/* Gives margin within content box for text */
+.content_box1 p, .content_box2 p {
+    margin: 2.5%;
+}
+
+/* Image specifications for pages with 1 only */
+.content_img {
+    grid-area: content_img;
+    width: 75%;
+    place-self: center;
+    margin-bottom: 3.3vw;
+}
+
+/* Styling for writing within image box - citation and title */
+.content_img p{
+    background-color: #007d19c8;
+    width:fit-content;
+    place-self: center;
+    color: #73c157;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+}
+
+/* Specifications for  the 'Famous Hacks' page with 2 image boxes side-by-side */
+.content_img1, .content_img2 {
+    width: 60%;
+    place-self: center;
+    text-align: center;
+    margin-bottom: 3.3vw;
+}
+
+/* Styling for image itself */
+.content_img1 img, .content_img2 img {
+    border-radius: 1.5vw;
+    width: 100%;
+}
+
+.content_img1 {
+    grid-area: content_img1;
+}
+
+.content_img2 {
+    grid-area: content_img2;
+}
+
+/* Styling for writing within image boxes when there are two */
+.content_img1 p, .content_img2 p {
+    background-color: #007d19c8;
+    width:90%;
+    place-self: center;
+    color: #73c157;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+}
+
+/* Placing an unmoving button in page centre at bottom with correspondent styling to navbar for consistency. */
+.top_btn {
+    position: fixed;
+    bottom: 3vw;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+    text-decoration: none;
+    padding:14px 16px;
+    background-color: #3ca252;
+    color: #e9ffea;
+    border-radius: 1.5vw;
+    /* Keeps it in front of everything */
+    z-index: 999;
+}
+
+.top_btn:hover {
+    background-color: #73c157;
+    color:black;
+    padding: 18px 20px;   
+}
+
+/* Styling for small footer at bottom of page. Maroon background stands out against green theme */
+.footer {
+    grid-area: footer;
+    background-color: maroon;
+    color: rgb(172, 172, 116);
+    border-radius: 2.5vw;
+    text-align: center;
+    margin-bottom: 5.8vw;
+}
