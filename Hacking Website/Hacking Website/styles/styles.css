@@ -244,6 +244,17 @@ showed it to be more visually appealing as such, and set as furthest back elemen
     place-self: center;
 }
 
+.content_img p{
+    text-decoration: none;
+    background-color: #007d19c8;
+    width:fit-content;
+    place-self: center;
+    color: #73c157;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    place-self: center;
+}
+
 /* Specifications for  the 'Famous Hacks' page with 2 image boxes side-by-side */
 .content_img1, .content_img2 {
     width: 60%;
